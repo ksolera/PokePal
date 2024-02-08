@@ -41,13 +41,13 @@ function App() {
       <div className="p-14">
         <div className="flex flex-col items-center">
           <Link to="/">
-            <header className="text-4xl text-yellow-700">Pokemon Picker</header>
+            <header className="text-4xl text-yellow-700">PokePal</header>
           </Link>
         </div>
         <div className="w-full flex justify-center">
           <input
             onChange={(e) => setInputSearch(e.target.value)}
-            placeholder="Enter Pokemon here"
+            placeholder="Enter Name of Pokemon"
             type="text"
             className="mt-10 p-2 border-blue-500 border-2"
           />
