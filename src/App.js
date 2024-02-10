@@ -40,21 +40,23 @@ function App() {
     <BrowserRouter>
       <div className="p-14">
         <div className="flex flex-col items-center">
-              <Link to="/">
-                <header className="text-4xl text-yellow-700">
-                  <a href="https://fontmeme.com/pokemon-font/">
-                    <img src="https://fontmeme.com/permalink/240210/86e421e8937b5d0d921c96b51824f9a5.png" alt="pokemon-font" border="0" />
-                  </a>
-                </header>
-              </Link>
-            </div>
+          <Link to="/">
+            <header className="text-4xl text-yellow-700">
+              <a href="https://fontmeme.com/pokemon-font/"><img src="https://fontmeme.com/permalink/240210/57b88dceb381a39cea4aaef1097f2f94.png" alt="pokemon-font" border="0" /></a>
+            </header>
+          </Link>
+        </div>
         <div className="w-full flex justify-center">
-          <input
-            onChange={(e) => setInputSearch(e.target.value)}
-            placeholder="Enter Name of Pokemon"
-            type="text"
-            className="mt-10 p-2 border-blue-500 border-2"
-          />
+          <div className="container mx-auto">
+            <label htmlFor="search" className="text-2xl">Search for Pokemon: </label>
+            <input
+              onChange={(e) => setInputSearch(e.target.value)}
+              placeholder="Enter Name of Pokemon"
+              type="text"
+              className="mt-10 p-2 border-blue-500 border-2"
+            />
+          </div>
+          
         </div>
       </div>
 
