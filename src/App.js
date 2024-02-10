@@ -40,14 +40,14 @@ function App() {
     <BrowserRouter>
       <div className="p-14">
         <div className="flex flex-col items-center">
-            <Link to="/">
-              <header className="text-4xl text-yellow-700">
-                <a href="https://fontmeme.com/pokemon-font/">
-                  <img src="https://fontmeme.com/permalink/240208/8682d23b9a247d1187415f2fb392b44a.png" alt="pokemon-font" border="0" />
-                </a>
-              </header>
-            </Link>
-          </div>
+              <Link to="/">
+                <header className="text-4xl text-yellow-700">
+                  <a href="https://fontmeme.com/pokemon-font/">
+                    <img src="https://fontmeme.com/permalink/240210/86e421e8937b5d0d921c96b51824f9a5.png" alt="pokemon-font" border="0" />
+                  </a>
+                </header>
+              </Link>
+            </div>
         <div className="w-full flex justify-center">
           <input
             onChange={(e) => setInputSearch(e.target.value)}
