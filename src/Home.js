@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Home({ pokemonProp: results }) {
-    console.log(results);
+    
     return (
         <div className="mt-10 p-4 flex flex-wrap">
             {results &&

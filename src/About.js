@@ -16,6 +16,7 @@ function About(props) {
                 });
         }
     }, [pokemonId]);
+
     return (
         <>
             {pokemon && pokemon.sprites && (
@@ -30,5 +31,6 @@ function About(props) {
         </>
     );
 }
+
 
 export default About

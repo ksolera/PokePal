@@ -13,11 +13,11 @@ function App() {
   const [filteredPokemon, setFilteredPokemon] = useState([]);
 
   useEffect(() => {
-    fetch("https://pokeapi.co/api/v2/pokemon?offset=0&limit=300")
+    fetch("https://pokeapi.co/api/v2/pokemon?offset=0&limit=151")
       .then((res) => res.json())
       .then((data) => {
         const results = data.results.map((pokemonDetails, index) => {
-          // console.log(res.results.pokemonData)
+          //console.log(res.results.pokemonData)
           return { ...pokemonDetails, index: index + 1 };
         });
         setPokemonsData({ ...data, results })
@@ -36,6 +36,8 @@ function App() {
     );
   }, [pokemonsData.results, inputSearch]);
 
+  
+
   return (
     <BrowserRouter>
       <div className="p-14">
@@ -53,11 +55,19 @@ function App() {
               onChange={(e) => setInputSearch(e.target.value)}
               placeholder="Enter Name of Pokemon"
               type="text"
-              className="mt-10 p-2 border-blue-500 border-2"
+              className="mt-10 p-2 border-black border-2"
             />
-          </div>
-          
-        </div>
+            <div>
+              <text className="text-2xl">Or</text>
+              </div>
+              <div>
+                <button className="bg-blue-500 hover:bg-blue-400 text-black py-2 px-3 rounded border text-2xl">Pick for me</button>
+                </div>
+              </div>
+            </div>
+         
+
+        
       </div>
 
       <Routes>

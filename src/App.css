@@ -37,8 +37,8 @@
   }
 }
 
-.App-container {
-  display: flex;
+.container {
+  text-align: center;
   flex-flow: row wrap;
   justify-content: space-between;
 }
