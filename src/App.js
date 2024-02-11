@@ -11,7 +11,15 @@ function App() {
   const [pokemonsData, setPokemonsData] = useState([]);
   const [inputSearch, setInputSearch] = useState([]);
   const [filteredPokemon, setFilteredPokemon] = useState([]);
+  const [randomPokemon, setRandomPokemon] = useState(generateRandomPokemon());
 
+  function generateRandomPokemon() {
+    return Math.floor(Math.random() * 151) + 1;
+  }
+
+  function randomizePokemon(){
+    setRandomPokemon(generateRandomPokemon());
+  }
   useEffect(() => {
     fetch("https://pokeapi.co/api/v2/pokemon?offset=0&limit=151")
       .then((res) => res.json())
@@ -40,7 +48,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="p-14">
+      <div className="p-14" id="top-section">
         <div className="flex flex-col items-center">
           <Link to="/">
             <header className="text-4xl text-yellow-700">
@@ -50,7 +58,7 @@ function App() {
         </div>
         <div className="w-full flex justify-center">
           <div className="container mx-auto">
-            <label htmlFor="search" className="text-2xl">Search for Pokemon: </label>
+            <label htmlFor="search" className="text-2xl text-white" >Search for Pokemon: </label>
             <input
               onChange={(e) => setInputSearch(e.target.value)}
               placeholder="Enter Name of Pokemon"
@@ -58,16 +66,15 @@ function App() {
               className="mt-10 p-2 border-black border-2"
             />
             <div>
-              <text className="text-2xl">Or</text>
+              <text className="mt-3 text-2xl text-white">Or</text>
               </div>
               <div>
-                <button className="bg-blue-500 hover:bg-blue-400 text-black py-2 px-3 rounded border text-2xl">Pick for me</button>
+                <Link to={`/about/${randomPokemon}`}>
+                <button className="mt-3 bg-blue-400 hover:bg-blue-500 text-black py-2 px-3 rounded border border-black text-2xl" onClick={randomizePokemon}>Pick for me</button>
+                </Link>
                 </div>
               </div>
             </div>
-         
-
-        
       </div>
 
       <Routes>

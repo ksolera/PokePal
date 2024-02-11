@@ -12,7 +12,7 @@ function About(props) {
                 .then((res) => res.json())
                 .then((data) => {
                     setPokemon(data);
-                    console.log(data);
+                    //console.log(data);
                 });
         }
     }, [pokemonId]);
