@@ -64,3 +64,8 @@
 footer a {
   padding-left:20px;
 }
+
+#reset {
+  display: 'flex';
+  justify-content: 'center';
+}

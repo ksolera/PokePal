@@ -5,7 +5,6 @@ import Home from './Home'
 import './App.css';
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom'
-import Logo from './images/Logo.png'
 
 function App() {
 
@@ -55,7 +54,7 @@ function App() {
             <Link to="/">
               <header className="text-4xl text-yellow-700">
                 <a href="https://fontmeme.com/pokemon-font/"><img src="https://fontmeme.com/permalink/240210/57b88dceb381a39cea4aaef1097f2f94.png" alt="pokemon-font" border="0" /></a>
-                <img src="Logo.png"/>
+                <img id="logo" src="images/Logo.png"/>
               </header>
             </Link>
           </div>
@@ -95,12 +94,15 @@ function App() {
           )}
         </Routes>
         </div>
+        <br></br>
+        <br></br>
         <div style={{ display: 'flex', justifyContent: 'center',
               background: 'darkgrey',
               color: 'darkgrey',
               borderColor: 'black'
             }}>
           <footer className="text-1xl text-white p-3"> 
+          <a href="/">Home</a>
           <a href="">About </a>
           <a href="">FAQ</a>
           <a href="">Contact Us</a>
