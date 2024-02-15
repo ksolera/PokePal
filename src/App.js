@@ -14,7 +14,7 @@ function App() {
   const [randomPokemon, setRandomPokemon] = useState(generateRandomPokemon());
 
   function generateRandomPokemon() {
-    return Math.floor(Math.random() * 151) + 1;
+    return Math.floor(Math.random() * 300) + 1;
   }
 
   function randomizePokemon(){
