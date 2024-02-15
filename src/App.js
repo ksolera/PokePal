@@ -48,44 +48,65 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="p-14" id="top-section">
-        <div className="flex flex-col items-center">
-          <Link to="/">
-            <header className="text-4xl text-yellow-700">
-              <a href="https://fontmeme.com/pokemon-font/"><img src="https://fontmeme.com/permalink/240210/57b88dceb381a39cea4aaef1097f2f94.png" alt="pokemon-font" border="0" /></a>
-            </header>
-          </Link>
-        </div>
-        <div className="w-full flex justify-center">
-          <div className="container mx-auto">
-            <label htmlFor="search" className="text-2xl text-white" >Search for Pokemon: </label>
-            <input
-              onChange={(e) => setInputSearch(e.target.value)}
-              placeholder="Enter Name of Pokemon"
-              type="text"
-              className="mt-10 p-2 border-black border-2"
-            />
-            <div>
-              <text className="mt-3 text-2xl text-white">Or</text>
+      <div>
+        <div className="p-14" id="top-section">
+          <div className="flex flex-col items-center">
+            <Link to="/">
+              <header className="text-4xl text-yellow-700">
+                <a href="https://fontmeme.com/pokemon-font/"><img src="https://fontmeme.com/permalink/240210/57b88dceb381a39cea4aaef1097f2f94.png" alt="pokemon-font" border="0" /></a>
+              </header>
+            </Link>
+          </div>
+          <div className="w-full flex justify-center">
+            <div className="container mx-auto">
+              <label htmlFor="search" className="text-2xl text-white" >Search for Pokemon: </label>
+              <input
+                onChange={(e) => setInputSearch(e.target.value)}
+                placeholder="Enter Name of Pokemon"
+                type="text"
+                className="mt-10 p-2 border-black border-2"
+              />
+              <div>
+                <text className="mt-3 text-2xl text-white">Or</text>
               </div>
               <div>
                 <Link to={`/about/${randomPokemon}`}>
-                <button className="mt-3 bg-blue-400 hover:bg-blue-500 text-black py-2 px-3 rounded border border-black text-2xl" onClick={randomizePokemon}>Pick for me</button>
+                  <button className="mt-3 bg-blue-400 hover:bg-blue-500 text-black py-2 px-3 rounded border border-black text-2xl" onClick={randomizePokemon}>Pick for me</button>
                 </Link>
-                </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div id="bottom-section">
+          <hr
+            style={{
+              background: 'black',
+              color: 'black',
+              borderColor: 'black',
+              height: '6px',
+            }}
+          />
+        <Routes>
+          <Route path="/about/:pokemonId" element={<About />} />
+          {filteredPokemon && (
+            <Route path="/" element={<Home pokemonProp={filteredPokemon} />} />
+          )}
+        </Routes>
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'center',
+              background: 'darkgrey',
+              color: 'darkgrey',
+              borderColor: 'black'
+            }}>
+          <footer className="text-1xl text-white p-3"> 
+          <a href="">About </a>
+          <a href="">FAQ</a>
+          <a href="">Contact Us</a>
+          <a href="">Terms of Service</a>
+          <a href="">Privacy Policy</a>  
+          </footer>
+        </div>
       </div>
-
-      <Routes>
-        <Route path="/about/:pokemonId" element={<About />}>
-        </Route>
-        {filteredPokemon &&
-          <Route path="/" element=
-            {<Home pokemonProp={filteredPokemon} />}>
-          </Route>
-        }
-      </Routes>
     </BrowserRouter>
   );
 }
