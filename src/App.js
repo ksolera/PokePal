@@ -5,6 +5,7 @@ import Home from './Home'
 import './App.css';
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom'
+import Logo from './images/Logo.png'
 
 function App() {
 
@@ -54,6 +55,7 @@ function App() {
             <Link to="/">
               <header className="text-4xl text-yellow-700">
                 <a href="https://fontmeme.com/pokemon-font/"><img src="https://fontmeme.com/permalink/240210/57b88dceb381a39cea4aaef1097f2f94.png" alt="pokemon-font" border="0" /></a>
+                <img src="Logo.png"/>
               </header>
             </Link>
           </div>

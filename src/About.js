@@ -24,6 +24,8 @@ function About(props) {
                     <h3 className="text-2xl text-green-900 uppercase">{pokemon.name}</h3>
                     <div className="flex justify-center">
                         <img className="w-48" src={pokemon.sprites["front_shiny"]} alt="" />
+                        <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`} width={75} height={70} alt="" />
+                       
                     </div>
                     <div>
                         <h2>Stats</h2>
