@@ -24,7 +24,15 @@ function About(props) {
                     <h3 className="text-2xl text-green-900 uppercase">{pokemon.name}</h3>
                     <div className="flex justify-center">
                         <img className="w-48" src={pokemon.sprites["front_shiny"]} alt="" />
-                        <img className="w-48" src={pokemon.sprites["back_shiny"]} alt="" />
+                    </div>
+                    <div>
+                        <h2>Stats</h2>
+                        <ul>
+                            <li>HP: {pokemon.stats[0].base_stat}</li>
+                            <li>Type: {pokemon.types[0].type.name}</li>
+                            <li>Attack: {pokemon.stats[1].base_stat}</li>
+                            <li>Speed: {pokemon.stats[5].base_stat}</li>
+                        </ul>
                     </div>
                 </div>
             )}
