@@ -52,11 +52,12 @@ function App() {
         <div className="p-14" id="top-section">
           <div className="flex flex-col items-center">
             <Link to="/">
-              <header className="text-4xl text-yellow-700">
+              <header className="text-4xl text-yellow-700 ">
                 <a href="https://fontmeme.com/pokemon-font/"><img src="https://fontmeme.com/permalink/240210/57b88dceb381a39cea4aaef1097f2f94.png" alt="pokemon-font" border="0" /></a>
-                <img id="logo" src="images/Logo.png"/>
               </header>
+              <img src="/logo.png"/>
             </Link>
+           
           </div>
           <div className="w-full flex justify-center">
             <div className="container mx-auto">
@@ -87,12 +88,15 @@ function App() {
               height: '6px',
             }}
           />
-        <Routes>
+          <div>
+          <Routes>
           <Route path="/about/:pokemonId" element={<About />} />
           {filteredPokemon && (
             <Route path="/" element={<Home pokemonProp={filteredPokemon} />} />
           )}
         </Routes>
+          </div>
+        
         </div>
         <br></br>
         <br></br>
