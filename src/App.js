@@ -5,6 +5,7 @@ import Home from './Home'
 import './App.css';
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom'
+import logo from './images/logo.png';
 
 function App() {
 
@@ -50,14 +51,14 @@ function App() {
     <BrowserRouter>
       <div>
         <div className="p-14" id="top-section">
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center ">
             <Link to="/">
-              <header className="text-4xl text-yellow-700 ">
+              <header className="flex space-x-5 text-4xl text-yellow-700">
                 <a href="https://fontmeme.com/pokemon-font/"><img src="https://fontmeme.com/permalink/240210/57b88dceb381a39cea4aaef1097f2f94.png" alt="pokemon-font" border="0" /></a>
+                <img src={logo} width={135} height={75}/>
               </header>
-              <img src="/logo.png"/>
+              
             </Link>
-           
           </div>
           <div className="w-full flex justify-center">
             <div className="container mx-auto">
