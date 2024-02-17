@@ -38,17 +38,34 @@ function About() {
         </div>
         <div className="flex justify-center">
           {chain.evolves_to.map((evolution) => (
-            <img
-              key={evolution.species.name}
-              className="w-40 h-40"
-              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${evolution.species.url.split('/').slice(-2, -1)}.png`}
-              alt=""
-            />
+            <div key={evolution.species.name} className="flex justify-center items-center">
+              <img
+                className="w-45 h-45"
+                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${evolution.species.url.split('/').slice(-2, -1)}.png`}
+                alt=""
+              />
+              <label className="flex justify-center text-2xl text-black-900 capitalize">
+                {evolution.species.name}
+              </label>
+              {evolution.evolves_to.map((nextEvolution) => (
+                <div key={nextEvolution.species.name} className="flex justify-center items-center">
+                  <img
+                    className="w-45 h-45"
+                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${nextEvolution.species.url.split('/').slice(-2, -1)}.png`}
+                    alt=""
+                  />
+                  <label className="flex justify-center text-2xl text-black-900 capitalize">
+                    {nextEvolution.species.name}
+                  </label>
+                </div>
+              ))}
+            </div>
           ))}
         </div>
       </div>
     );
   };
+  
   
   
 
