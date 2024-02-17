@@ -82,6 +82,7 @@ function About() {
                 {pokemon.stats[5].base_stat}
               </li>
             </ul>
+            <br></br>
           </div>
         </div>
       )}
