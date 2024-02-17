@@ -31,7 +31,7 @@ function About() {
       <div className="w-3/12 m-auto bg-purple-100 mt-4 shadow-2xl flex justify-center flex-col items-center">
         <div key={chain.species.name} className="flex justify-center items-center">
           <img
-            className="w-40 h-40"
+            className="w-45 h-45"
             src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${chain.species.url.split('/').slice(-2, -1)}.png`}
             alt=""
           />
@@ -44,9 +44,6 @@ function About() {
                 src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${evolution.species.url.split('/').slice(-2, -1)}.png`}
                 alt=""
               />
-              <label className="flex justify-center text-2xl text-black-900 capitalize">
-                {evolution.species.name}
-              </label>
               {evolution.evolves_to.map((nextEvolution) => (
                 <div key={nextEvolution.species.name} className="flex justify-center items-center">
                   <img
@@ -54,9 +51,6 @@ function About() {
                     src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${nextEvolution.species.url.split('/').slice(-2, -1)}.png`}
                     alt=""
                   />
-                  <label className="flex justify-center text-2xl text-black-900 capitalize">
-                    {nextEvolution.species.name}
-                  </label>
                 </div>
               ))}
             </div>
