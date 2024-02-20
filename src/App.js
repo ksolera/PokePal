@@ -36,7 +36,7 @@ function App() {
 
   useEffect(() => {
     if (!inputSearch) {
-      setFilteredPokemon([]);
+      setFilteredPokemon(pokemonsData.results);
       return;
     }
 
